@@ -1,83 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dylan | Web Developer</title>
+<<!-- Favicon Setup -->
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dylabytes | Web Developer</title>
+
+  <!-- ✅ Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Favicon -->
+  
+
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-      color: #333;
+      font-family: 'Inter', sans-serif;
+      background-color: #fffaf5;
+      color: #0c1a2b;
     }
+
     header {
-      background: #222;
-      color: white;
-      padding: 2rem;
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: #fffaf5;
+      border-bottom: 1px solid #eee;
     }
-    section {
-      padding: 2rem;
-      max-width: 800px;
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #0c1a2b;
+    }
+
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #0c1a2b;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #ff7a00;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 100px 40px;
+      max-width: 700px;
       margin: auto;
     }
-    h2 {
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.5rem;
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
-    .project {
-      margin-bottom: 1rem;
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      max-width: 500px;
     }
-    .contact {
+
+    .btn {
+      background-color: #ff7a00;
+      color: white;
+      padding: 14px 28px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #e66a00;
+    }
+
+    /* ✅ Projects Section */
+    #projects {
+      background: #fef9f3;
+      padding: 80px 40px;
       text-align: center;
-      padding: 1rem;
-      background: #eee;
     }
-    a {
-      color: #0077cc;
+
+    #projects h2 {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    .project-grid {
+      display: grid;
+      gap: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .project-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      text-align: left;
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+      color: #0c1a2b;
+    }
+
+    .project-card p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <header>
-    <h1>Dylan</h1>
-    <p>Beginner Web Developer – I build simple, clean websites</p>
+    <div class="logo">dylabytes</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p> Hi! I'm Dylan, a beginner web developer based in Los Angeles. I specialize in creating clean, responsive one-page websites using HTML and CSS, perfect for small businesses, artists, and personal brands. I'm currently building my portfolio and offering affordable freelance services to help others bring their ideas online. Let’s work together to make something awesome!</p>
+  <section class="hero">
+    <h1>Hi, I’m Dylan.<br>Web Developer</h1>
+    <p>I build modern and responsive websites, applications, and user interfaces.</p>
+    <a class="btn" href="#projects">View My Work</a>
   </section>
 
-  <section>
-    <h2>My Projects</h2>
-    <div class="project">
-      <p><strong>Portfolio Website</strong> – <a href="#">View Demo</a></p>
-    </div>
-    <div class="project">
-      <p><strong>Restaurant Site Clone</strong> – <a href="#">View Demo</a></p>
-    </div>
-    <div class="project">
-      <p><strong>Landing Page</strong> – <a href="#">View Demo</a></p>
+  <!-- ✅ Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A sleek, personal site built with HTML and CSS. Fully responsive and hosted live.</p>
+      </div>
+      <div class="project-card">
+        <h3>Landing Page</h3>
+        <p>Simple and effective landing page design with clear CTA, smooth scroll, and sharp layout.</p>
+      </div>
+      <div class="project-card">
+        <h3>Small Biz Clone</h3>
+        <p>A one-page website cloned from a local business, featuring contact info and modern styling.</p>
+      </div>
     </div>
   </section>
-
-  <section>
-    <h2>Services</h2>
-    <ul>
-      <li>1-Page Business Websites</li>
-      <li>Landing Pages</li>
-      <li>Fixing HTML/CSS Bugs</li>
-    </ul>
-    <p>Check out my Fiverr gigs or message me directly.</p>
-  </section>
-
-  <div class="contact">
-    <p>Email me: <a href="mailto:dylabytes@gmail.com">youremail@example.com</a></p>
-  </div>
 
 </body>
 </html>
