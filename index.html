@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-<link rel="manifest" href="site.webmanifest">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <meta charset="UTF-8" />
@@ -91,7 +87,25 @@
     }
 
     /* ✅ Projects Section */
-    #projects {
+    #projects {<section id="contact" style="padding: 80px 40px; background: #fffaf5;">
+  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 40px;">Contact Me</h2>
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="max-width: 600px; margin: auto;">
+    <label for="name" style="display: block; margin-bottom: 10px;">Name</label>
+    <input type="text" name="name" id="name" required style="width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #ccc;" />
+
+    <label for="email" style="display: block; margin-bottom: 10px;">Email</label>
+    <input type="email" name="email" id="email" required style="width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #ccc;" />
+
+    <label for="message" style="display: block; margin-bottom: 10px;">Message</label>
+    <textarea name="message" id="message" rows="6" required style="width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #ccc;"></textarea>
+
+    <button type="submit" style="background-color: #ff7a00; color: white; padding: 14px 24px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;">
+      Send Message
+    </button>
+  <form action="https://formspree.io/f/xnnvpoaz" method="POST">
+
+</section>
+
       background: #fef9f3;
       padding: 80px 40px;
       text-align: center;
@@ -146,7 +160,8 @@
       <a href="#">Home</a>
       <a href="#">About</a>
       <a href="#projects">Projects</a>
-      <a href="#">Contact</a>
+     <a href="#contact">Contact</a>
+
     </nav>
   </header>
 
@@ -174,6 +189,22 @@
       </div>
     </div>
   </section>
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form action="https://formspree.io/f/xnnvpoaz" method="POST">
+    <label>
+      Your email:
+      <input type="email" name="email" required>
+    </label>
+    <br />
+    <label>
+      Your message:
+      <textarea name="message" required></textarea>
+    </label>
+    <br />
+    <button type="submit">Send</button>
+  </form>
+</section>
 
 </body>
 </html>
