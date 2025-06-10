@@ -3,92 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>dylabytes | Web Developer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>Dylan's Portfolio</title>
   <style>
     body {
-      font-family: 'Inter', sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
       background: #fffaf5;
-      color: #1a1a1a;
+      color: #000;
     }
-    header, section {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-    nav {
-      display: flex;
-      justify-content: flex-end;
-      gap: 20px;
+
+    header {
+      background: #fff;
       padding: 20px;
+      text-align: center;
     }
-    a {
+
+    nav a {
+      margin: 0 10px;
       text-decoration: none;
-      color: #1a1a1a;
+      color: purple;
     }
-    .hero h1 {
-      font-size: 2.5rem;
-    }
+
     .btn {
       background-color: #ff7a00;
       color: white;
       padding: 10px 20px;
       border: none;
-      font-weight: 600;
-      border-radius: 8px;
       cursor: pointer;
+      font-weight: bold;
+      margin-top: 10px;
+      display: inline-block;
     }
+
+    section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
     .project-card {
       background: white;
       padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       margin-bottom: 20px;
     }
-    .form-group {
-      margin-bottom: 20px;
+
+    form label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
     }
-    input, textarea {
+
+    form input, form textarea {
       width: 100%;
       padding: 12px;
+      margin-bottom: 20px;
       border: 1px solid #ccc;
       border-radius: 6px;
-      font-size: 16px;
     }
-    label {
-      font-weight: 600;
-      display: block;
-      margin-bottom: 6px;
+
+    form button {
+      background-color: #ff7a00;
+      color: white;
+      padding: 14px 24px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
   <header>
+    <div class="logo">dylabytes</div>
     <nav>
-      <a href="#">Home</a>
+      <a href="#home">Home</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
     </nav>
-    <div class="hero">
-      <h1>Hi, I’m Dylan. <br> Web Developer</h1>
-      <p>I build modern and responsive websites, applications, and user interfaces.</p>
-      <a href="#projects" class="btn">View My Work</a>
-    </div>
   </header>
+
+  <section class="hero" id="home">
+    <h1>Hi, I'm Dylan.<br />Web Developer</h1>
+    <p>I build modern and responsive websites, applications, and user interfaces.</p>
+    <a class="btn" href="#projects">View My Work</a>
+  </section>
 
   <section id="projects">
     <h2>Projects</h2>
+
     <div class="project-card">
       <h3>Portfolio Website</h3>
       <p>A sleek, personal site built with HTML and CSS. Fully responsive and hosted live.</p>
     </div>
+
     <div class="project-card">
       <h3>Landing Page</h3>
       <p>Simple and effective landing page design with clear CTA, smooth scroll, and sharp layout.</p>
     </div>
+
     <div class="project-card">
       <h3>Small Biz Clone</h3>
       <p>A one-page website cloned from a local business, featuring contact info and modern styling.</p>
@@ -96,25 +115,21 @@
   </section>
 
   <section id="contact">
-    <h2 style="text-align:center; margin-bottom: 40px;">Contact Me</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <div class="form-group">
-        <label for="first-name">First Name</label>
-        <input type="text" name="first-name" id="first-name" required>
-      </div>
-      <div class="form-group">
-        <label for="last-name">Last Name</label>
-        <input type="text" name="last-name" id="last-name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea name="message" id="message" rows="5" required></textarea>
-      </div>
-      <button type="submit" class="btn">Send Message</button>
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/mgvyapyj" method="POST">
+      <label for="first-name">First Name</label>
+      <input type="text" id="first-name" name="first-name" required />
+
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name" name="last-name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit">Send Message</button>
     </form>
   </section>
 
