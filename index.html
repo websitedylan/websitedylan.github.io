@@ -101,6 +101,26 @@
       background: #fff0e6;
       border-radius: 10px;
     }
+
+    .hire-me-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: purple;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: transform 0.2s ease;
+      z-index: 1000;
+    }
+
+    .hire-me-btn:hover {
+      transform: scale(1.05);
+      background-color: #5c2d91;
+    }
   </style>
 </head>
 
@@ -181,6 +201,8 @@
       </form>
     </div>
   </section>
+
+  <a href="#contact" class="hire-me-btn">Hire Me</a>
 </body>
 
 </html>
