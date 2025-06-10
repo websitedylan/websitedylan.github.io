@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -25,7 +26,7 @@
     }
 
     .btn {
-      background-color: #f77a0c;
+      background-color: #ff7a00;
       color: white;
       padding: 10px 20px;
       border: none;
@@ -58,7 +59,8 @@
       font-weight: bold;
     }
 
-    form input, form textarea {
+    form input,
+    form textarea {
       width: 100%;
       padding: 12px;
       margin-bottom: 20px;
@@ -67,7 +69,7 @@
     }
 
     form button {
-      background-color: #f77a0c;
+      background-color: #ff7a00;
       color: white;
       padding: 14px 24px;
       border: none;
@@ -77,8 +79,8 @@
     }
   </style>
 </head>
-<body>
 
+<body>
   <header>
     <div class="logo">dylabytes</div>
     <nav>
@@ -115,7 +117,7 @@
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/xanjeldj" method="POST">
+    <form action="https://formspree.io/f/xanjeldj" method="POST" class="project-card">
       <label for="first-name">First Name</label>
       <input type="text" id="first-name" name="first-name" required />
 
@@ -132,5 +134,19 @@
     </form>
   </section>
 
+  <section id="email-signup">
+    <h2>Join My Email List</h2>
+    <p>Be the first to hear about new drops, projects, and exclusive content.</p>
+    <form action="https://formspree.io/f/xanjeldj" method="POST" class="project-card">
+      <label for="signup-name">Name</label>
+      <input type="text" id="signup-name" name="signup-name" required />
+
+      <label for="signup-email">Email</label>
+      <input type="email" id="signup-email" name="signup-email" required />
+
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
 </body>
+
 </html>
