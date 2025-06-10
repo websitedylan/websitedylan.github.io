@@ -1,67 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF‑8" />
-  <meta name="viewport" content="width=device‑width, initial‑scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dylan's Portfolio</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #fffaf5;
-      scroll-behavior: smooth;
+      color: #000;
     }
+
     header {
+      background: #fff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
       position: sticky;
       top: 0;
-      background: white;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      z-index: 10;
+      z-index: 1000;
     }
-    .logo { font-weight: bold; }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+
     nav a {
       margin-left: 20px;
       text-decoration: none;
       color: purple;
+      font-weight: bold;
     }
+
     section {
-      padding: 40px 20px;
-      max-width: 800px;
+      padding: 80px 20px;
+      max-width: 900px;
       margin: auto;
     }
+
+    h1, h2, h3 {
+      text-align: center;
+    }
+
     .btn {
-      display: inline-block;
       background-color: #ff7a00;
       color: white;
       padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 4px;
-      margin-top: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 20px;
     }
+
     .project-card {
       background: white;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       margin-bottom: 20px;
     }
-    .project-card img {
-      width: 100%;
-      border-radius: 6px;
-      margin-bottom: 10px;
+
+    form label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
     }
-    form label { display: block; margin-bottom: 5px; font-weight: bold; }
+
     form input, form textarea {
       width: 100%;
       padding: 12px;
-      margin-bottom: 20px;
+      margin-top: 5px;
       border: 1px solid #ccc;
-      border-radius: 4px;
+      border-radius: 6px;
     }
+
     form button {
       background-color: #ff7a00;
       color: white;
@@ -70,66 +92,95 @@
       border-radius: 4px;
       cursor: pointer;
       font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .email-signup {
+      margin-top: 60px;
+      padding: 40px;
+      background: #fff0e6;
+      border-radius: 10px;
     }
   </style>
 </head>
+
 <body>
+  <header>
+    <div class="logo">dylabytes</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<header>
-  <div class="logo">dylabytes</div>
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <section id="home">
+    <h1>Hi, I'm Dylan.<br>Web Developer</h1>
+    <p style="text-align: center;">I build modern and responsive websites, applications, and user interfaces.</p>
+    <div style="text-align: center;">
+      <a class="btn" href="#projects">View My Work</a>
+    </div>
+  </section>
 
-<section id="home">
-  <h1>Hi, I'm Dylan.<br />Web Developer</h1>
-  <p>I build modern and responsive websites, applications, and user&nbsp;interfaces.</p>
-  <a class="btn" href="#projects">View My Work</a>
-</section>
+  <section id="about">
+    <h2>About Me</h2>
+    <p style="text-align: center; max-width: 700px; margin: auto;">
+      I'm passionate about building creative, functional, and user-friendly websites. From landing pages to complete web applications, I strive to make every interaction intuitive and visually appealing.
+    </p>
+  </section>
 
-<section id="projects">
-  <h2>Projects</h2>
+  <section id="projects">
+    <h2>Projects</h2>
 
-  <div class="project-card">
-    <img src="path/to/image1.png" alt="Project 1 Screenshot" />
-    <h3>Portfolio Website</h3>
-    <p>A sleek personal site built with HTML and CSS. Fully responsive and hosted live.</p>
-    <a class="btn" href="https://github.com/yourusername/portfolio" target="_blank">GitHub</a>
-    <a class="btn" href="https://your-live-portfolio-url.com" target="_blank">View Live</a>
-  </div>
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>A sleek, personal site built with HTML and CSS. Fully responsive and hosted live.</p>
+    </div>
 
-  <div class="project-card">
-    <img src="path/to/image2.png" alt="Project 2 Screenshot" />
-    <h3>Landing Page</h3>
-    <p>Simple and effective landing page design with clear CTA, smooth scroll, and sharp layout.</p>
-    <a class="btn" href="#">View Live</a>
-  </div>
+    <div class="project-card">
+      <h3>Landing Page</h3>
+      <p>Simple and effective landing page design with clear CTA, smooth scroll, and sharp layout.</p>
+    </div>
 
-  <div class="project-card">
-    <img src="path/to/image3.png" alt="Project 3 Screenshot" />
-    <h3>Small Biz Clone</h3>
-    <p>A one-page website cloned from a local business, featuring contact info and modern styling.</p>
-    <a class="btn" href="#">View Live</a>
-  </div>
-</section>
+    <div class="project-card">
+      <h3>Small Biz Clone</h3>
+      <p>A one-page website cloned from a local business, featuring contact info and modern styling.</p>
+    </div>
+  </section>
 
-<section id="contact">
-  <h2>Contact Me</h2>
-  <form action="https://formspree.io/f/xanjeldj" method="POST">
-    <label for="first-name">First Name</label>
-    <input type="text" id="first-name" name="first-name" required />
-    <label for="last-name">Last Name</label>
-    <input type="text" id="last-name" name="last-name" required />
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required />
-    <label for="message">Message</label>
-    <textarea id="message" name="message" rows="6" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
-</section>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xanjeldj" method="POST">
+      <label for="first-name">First Name</label>
+      <input type="text" id="first-name" name="first-name" required>
 
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name" name="last-name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="email-signup">
+      <h3>Join My Email List</h3>
+      <p>Be the first to hear about new drops, projects, and exclusive content.</p>
+      <form>
+        <label for="signup-name">Name</label>
+        <input type="text" id="signup-name" name="signup-name" required>
+
+        <label for="signup-email">Email</label>
+        <input type="email" id="signup-email" name="signup-email" required>
+
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
 </body>
+
 </html>
