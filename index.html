@@ -1,158 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="icon" href="favicon.ico" type="image/x-icon">
-
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>dylabytes | Web Developer</title>
 
-  <!-- ✅ Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-  <!-- ✅ Favicon -->
-  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
     body {
-      margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #fffaf5;
-      color: #0c1a2b;
+      margin: 0;
+      padding: 0;
+      background: #fffaf5;
+      color: #0f0f0f;
     }
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      background-color: #fffaf5;
-      border-bottom: 1px solid #eee;
-    }
-
-    .logo {
-      font-size: 1.4rem;
-      font-weight: 800;
-      color: #0c1a2b;
-    }
-
-    nav a {
-      margin-left: 24px;
-      text-decoration: none;
-      color: #0c1a2b;
-      font-weight: 500;
-      transition: color 0.2s ease;
-    }
-
-    nav a:hover {
-      color: #ff7a00;
-    }
-
-    .hero {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: center;
-      padding: 100px 40px;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-      max-width: 500px;
-    }
-
-    .btn {
-      background-color: #ff7a00;
-      color: white;
-      padding: 14px 28px;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 6px;
-      font-size: 1rem;
-      transition: background 0.2s ease;
-    }
-
-    .btn:hover {
-      background-color: #e66a00;
-    }
-
-    /* ✅ Projects Section */
-    #projects {<section id="contact" style="padding: 80px 40px; background: #fffaf5;">
-  <h2 style="text-align: center; font-size: 2rem; margin-bottom: 40px;">Contact Me</h2>
- \
-
-  <form action="https://formspree.io/f/xnnvpoaz" method="POST" style="max-width: 600px;">
-
-  <input type="text" name="first-name" id="first-name" required style="width: 100%; padding: 12px; margin-bottom: 10px;">
-
-  <label for="last-name">Last Name</label>
-  <input type="text" name="last-name" id="last-name" required style="width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 8px;">
-
-  <label for="email" style="display: block; margin-bottom: 10px;">Email</label>
-  <input type="email" name="email" id="email" required style="width: 100%; padding: 12px; margin-bottom: 20px;">
-
-  <label for="message" style="display: block; margin-bottom: 10px;">Message</label>
-  <textarea name="message" id="message" rows="6" required style="width: 100%; padding: 12px; margin-bottom: 20px;"></textarea>
-
-  <button type="submit" style="background-color: #f77a0c; color: white; padding: 14px 24px;">Send Message</button>
-
-</form>
-
-
-</section>
-
-      background: #fef9f3;
-      padding: 80px 40px;
+      padding: 2rem;
       text-align: center;
     }
 
-    #projects h2 {
-      font-size: 2rem;
-      margin-bottom: 40px;
+    .btn {
+      background-color: #f77a0c;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
     }
 
-    .project-grid {
-      display: grid;
-      gap: 40px;
-      max-width: 900px;
-      margin: auto;
+    section {
+      padding: 60px 20px;
+    }
+
+    h1, h2, h3 {
+      font-weight: 800;
     }
 
     .project-card {
       background: white;
-      padding: 30px;
+      padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      text-align: left;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      margin-bottom: 20px;
     }
 
-    .project-card h3 {
-      margin-top: 0;
-      color: #0c1a2b;
+    form {
+      max-width: 600px;
+      margin: 0 auto;
     }
 
-    .project-card p {
-      color: #555;
-      font-size: 0.95rem;
+    label {
+      display: block;
+      margin-bottom: 6px;
+      margin-top: 20px;
+      font-weight: 600;
     }
 
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.2rem;
-      }
-      .hero p {
-        font-size: 1rem;
-      }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
     }
   </style>
 </head>
@@ -160,56 +82,57 @@
 <body>
 
   <header>
-    <div class="logo">dylabytes</div>
+    <div class="logo"><strong>dylabytes</strong></div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#projects">Projects</a>
-     <a href="#contact">Contact</a>
-
+      <a href="#">Home</a> |
+      <a href="#projects">Projects</a> |
+      <a href="#contact">Contact</a>
     </nav>
-  </header>
-
-  <section class="hero">
     <h1>Hi, I’m Dylan.<br>Web Developer</h1>
     <p>I build modern and responsive websites, applications, and user interfaces.</p>
     <a class="btn" href="#projects">View My Work</a>
-  </section>
+  </header>
 
-  <!-- ✅ Projects Section -->
+  <!-- Projects Section -->
   <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>A sleek, personal site built with HTML and CSS. Fully responsive and hosted live.</p>
-      </div>
-      <div class="project-card">
-        <h3>Landing Page</h3>
-        <p>Simple and effective landing page design with clear CTA, smooth scroll, and sharp layout.</p>
-      </div>
-      <div class="project-card">
-        <h3>Small Biz Clone</h3>
-        <p>A one-page website cloned from a local business, featuring contact info and modern styling.</p>
-      </div>
+    <h2 style="text-align: center;">Projects</h2>
+
+    <div class="project-card">
+      <h3>Portfolio Website</h3>
+      <p>A sleek, personal site built with HTML and CSS. Fully responsive and hosted live.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Landing Page</h3>
+      <p>Simple and effective landing page design with clear CTA, smooth scroll, and sharp layout.</p>
+    </div>
+
+    <div class="project-card">
+      <h3>Small Biz Clone</h3>
+      <p>A one-page website cloned from a local business, featuring contact info and modern styling.</p>
     </div>
   </section>
-<section id="contact">
-  <h2>Contact Me</h2>
-  <form action="https://formspree.io/f/xnnvpoaz" method="POST">
-    <label>
-      Your email:
-      <input type="email" name="email" required>
-    </label>
-    <br />
-    <label>
-      Your message:
-      <textarea name="message" required></textarea>
-    </label>
-    <br />
-    <button type="submit">Send</button>
-  </form>
-</section>
+
+  <!-- Contact Form Section -->
+  <section id="contact" style="padding: 80px 40px; background: #fffaf5;">
+    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 40px;">Contact Me</h2>
+    <form action="https://formspree.io/f/xnnvpoaz" method="POST">
+
+      <label for="first-name">First Name</label>
+      <input type="text" name="first-name" id="first-name" required>
+
+      <label for="last-name">Last Name</label>
+      <input type="text" name="last-name" id="last-name" required>
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="message">Message</label>
+      <textarea name="message" id="message" rows="6" required></textarea>
+
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
 
 </body>
 </html>
