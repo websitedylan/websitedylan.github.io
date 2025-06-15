@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DylaBytes - Professional Websites for Small Businesses</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stay Sharp Barbershop</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f8f8f8; color: #333; }
+    body { font-family: Arial, sans-serif; margin: 0; background: #fff8f4; color: #333; }
     header { background: #121212; color: white; padding: 20px; text-align: center; }
-    nav { background: #333; padding: 10px; text-align: center; display: flex; flex-wrap: wrap; justify-content: center; }
-    nav a { color: white; margin: 8px 15px; text-decoration: none; font-weight: bold; }
+    nav { background: #f5dfff; padding: 15px; text-align: center; }
+    nav a { margin: 10px 15px; text-decoration: none; color: #333; font-weight: bold; padding: 10px 20px; background: #f3e2ff; border-radius: 25px; }
+    .hero { padding: 60px 20px; text-align: center; background: #fff0e6; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    .hero p { font-size: 1.2rem; margin-bottom: 20px; }
+    .cta-btn { background: #ff7a00; color: white; padding: 15px 30px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; text-decoration: none; }
     section { padding: 40px 20px; max-width: 1000px; margin: auto; background: white; margin-bottom: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h2 { text-align: center; margin-bottom: 30px; }
+    .services { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .service-box { border: 1px solid #ddd; padding: 20px; flex: 1 1 250px; text-align: center; border-radius: 10px; background: #fafafa; }
     footer { text-align: center; padding: 20px; font-size: 0.9em; color: #777; }
-    button { background: #ff7a00; color: white; padding: 12px 24px; border: none; border-radius: 6px; cursor: pointer; font-weight: bold; }
-    img.logo { height: 80px; margin-bottom: 15px; max-width: 90%; height: auto; }
-    .portfolio { display: flex; flex-wrap: wrap; justify-content: center; }
-    .project { margin: 15px; max-width: 300px; text-align: center; }
-    .project img { width: 100%; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+    img.logo { height: 100px; margin: 20px auto; display: block; }
     @media (max-width: 600px) {
-      header h1 { font-size: 1.8rem; }
+      .hero h1 { font-size: 2rem; }
       nav { flex-direction: column; }
       nav a { margin: 10px 0; }
-      section { padding: 20px 10px; }
+      .services { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
@@ -28,42 +31,63 @@
 <body>
 
 <header>
-  <h1>DylaBytes</h1>
-  <p>Websites for small businesses — fast, affordable, done-for-you.</p>
+  <img class="logo" src="../screenshots/staysharplogo.png" alt="Stay Sharp Logo">
+  <h1>Stay Sharp Barbershop</h1>
+  <p>Clean Cuts • Precision Fades • Walk-ins Welcome</p>
 </header>
 
 <nav>
   <a href="#about">About</a>
-  <a href="#portfolio">Portfolio</a>
+  <a href="#services">Services</a>
   <a href="#contact">Contact</a>
 </nav>
 
+<div class="hero">
+  <h1>Look Sharp. Stay Sharp.</h1>
+  <p>Precision cuts. Clean fades. Top tier barber service right here in your city.</p>
+  <a class="cta-btn" href="#contact">Book An Appointment</a>
+</div>
+
 <section id="about">
-  <h2>About Me</h2>
-  <p>I help businesses get online fast with clean websites that get results. I handle everything: design, setup, mobile optimization, and updates. You focus on your business — I build your online presence.</p>
+  <h2>About Stay Sharp</h2>
+  <p>At Stay Sharp, we specialize in modern fades, classic cuts, beard trims, and full grooming packages for men. Our expert barbers combine skill and style to give you the freshest look, every time. Whether you're a walk-in or a regular, you’ll leave sharp, clean, and confident.</p>
 </section>
 
-<section id="portfolio">
-  <h2>My Work</h2>
-  <div class="portfolio">
-
-    <div class="project">
-      <a href="barber-demo/index.html" target="_blank">
-        <img src="screenshots/staysharplogo.png" alt="Stay Sharp Demo">
-      </a>
-      <h3>Stay Sharp Barbershop</h3>
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service-box">
+      <h3>Haircut</h3>
+      <p>Clean, precise, modern or classic styles.</p>
+      <p><strong>$35</strong></p>
     </div>
-
+    <div class="service-box">
+      <h3>Fade & Taper</h3>
+      <p>Skin fades, tapers, mid, high & low fades.</p>
+      <p><strong>$40</strong></p>
+    </div>
+    <div class="service-box">
+      <h3>Beard Trim</h3>
+      <p>Detailed shaping, lining, & cleanup.</p>
+      <p><strong>$20</strong></p>
+    </div>
+    <div class="service-box">
+      <h3>Full Groom Package</h3>
+      <p>Haircut + Beard package.</p>
+      <p><strong>$55</strong></p>
+    </div>
   </div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p>Email: dylabytes@gmail.com</p>
+  <h2>Contact & Booking</h2>
+  <p>📍 123 Main Street, Los Angeles, CA</p>
+  <p>📞 (555) 123-4567</p>
+  <p>📧 info@staysharp.com</p>
 </section>
 
 <footer>
-  &copy; 2025 DylaBytes. All rights reserved.
+  &copy; 2025 Stay Sharp Barbershop. All rights reserved.
 </footer>
 
 </body>
