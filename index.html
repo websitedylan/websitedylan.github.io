@@ -1,48 +1,37 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DylaBytes | Small Business Website Design</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>DylaBytes - Small Business Website Design</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Poppins', sans-serif; background: #fff8f4; color: #333; line-height: 1.6; }
-    header { background: #121212; color: white; padding: 30px 20px; text-align: center; }
-    header h1 { font-size: 2.8rem; }
-    header p { font-size: 1.2rem; margin-top: 10px; color: #bbb; }
-
-    nav { background: #f3e2ff; padding: 15px; text-align: center; }
-    nav a { margin: 10px 20px; text-decoration: none; color: #121212; font-weight: 600; font-size: 1.1rem; padding: 10px 20px; border-radius: 25px; transition: 0.3s; }
-    nav a:hover { background: #ddd; }
-
-    .hero { padding: 80px 20px; text-align: center; background: linear-gradient(45deg, #fff0e6, #ffe9dc); }
-    .hero h1 { font-size: 3rem; margin-bottom: 20px; }
-    .hero p { font-size: 1.3rem; margin-bottom: 30px; color: #555; }
-    .cta-btn { background: #ff7a00; color: white; padding: 18px 35px; border: none; border-radius: 40px; font-weight: 700; text-decoration: none; font-size: 1.1rem; transition: 0.3s; }
-    .cta-btn:hover { background: #e96b00; }
-
-    section { padding: 60px 20px; max-width: 1200px; margin: auto; background: white; margin-bottom: 40px; border-radius: 15px; box-shadow: 0 0 20px rgba(0,0,0,0.1); }
-    h2 { text-align: center; margin-bottom: 40px; font-size: 2.2rem; }
-
-    .pricing { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
-    .package { border: 1px solid #eee; padding: 30px; flex: 1 1 300px; text-align: center; border-radius: 15px; background: #fafafa; transition: 0.3s; }
-    .package:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-    .package h3 { font-size: 1.5rem; margin-bottom: 15px; }
-    .package p { font-size: 1.1rem; }
-
-    .portfolio { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; }
-    .project { text-align: center; width: 320px; }
-    .project img { width: 100%; border-radius: 15px; box-shadow: 0 0 12px rgba(0,0,0,0.1); }
-    .project h3 { margin-top: 15px; font-size: 1.3rem; }
-
-    footer { text-align: center; padding: 30px; font-size: 0.95em; color: #777; }
-
-    @media (max-width: 700px) {
-      header h1 { font-size: 2rem; }
-      .hero h1 { font-size: 2.2rem; }
-      nav a { margin: 10px 5px; font-size: 1rem; padding: 8px 16px; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, sans-serif; margin: 0; background: #fff8f4; color: #333; }
+    header { background: #121212; color: white; padding: 20px; text-align: center; position: sticky; top: 0; z-index: 1000; }
+    nav { background: #f5dfff; padding: 15px; text-align: center; position: sticky; top: 70px; z-index: 999; }
+    nav a { margin: 10px 15px; text-decoration: none; color: #333; font-weight: bold; padding: 10px 20px; background: #f3e2ff; border-radius: 25px; }
+    .hero { padding: 60px 20px; text-align: center; background: #fff0e6; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    .hero p { font-size: 1.2rem; margin-bottom: 20px; }
+    .cta-btn { background: #ff7a00; color: white; padding: 15px 30px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; text-decoration: none; }
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; background: white; margin-bottom: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h2 { text-align: center; margin-bottom: 30px; }
+    .pricing { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .package { border: 1px solid #ddd; padding: 20px; flex: 1 1 250px; text-align: center; border-radius: 10px; background: #fafafa; }
+    .portfolio { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .project { text-align: center; width: 300px; }
+    .project img { width: 100%; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+    footer { text-align: center; padding: 20px; font-size: 0.9em; color: #777; }
+    form label { display: block; margin-bottom: 5px; font-weight: bold; }
+    form input, form textarea { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px; }
+    form button { background-color: #ff7a00; color: white; padding: 14px 24px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; display: block; margin: 0 auto; }
+    .sticky-contact { position: fixed; bottom: 20px; right: 20px; background: #ff7a00; padding: 15px 25px; border-radius: 30px; color: white; font-weight: bold; text-decoration: none; box-shadow: 0 0 10px rgba(0,0,0,0.3); }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      nav { flex-direction: column; }
+      nav a { margin: 10px 0; }
       .pricing, .portfolio { flex-direction: column; align-items: center; }
+      .sticky-contact { right: 10px; bottom: 10px; }
     }
   </style>
 </head>
@@ -58,11 +47,12 @@
   <a href="#services">Services</a>
   <a href="#portfolio">Portfolio</a>
   <a href="#contact">Contact</a>
+  <a href="#subscribe">Subscribe</a>
 </nav>
 
 <div class="hero">
-  <h1>Websites That Build Businesses</h1>
-  <p>Custom websites for barbershops, sober living, restaurants & small businesses.</p>
+  <h1>Professional Websites for Small Businesses</h1>
+  <p>Fast, affordable website design for service businesses, entrepreneurs, and local companies.</p>
   <a class="cta-btn" href="#contact">Get A Free Quote</a>
 </div>
 
@@ -71,17 +61,17 @@
   <div class="pricing">
     <div class="package">
       <h3>Starter Site</h3>
-      <p>3 Pages</p>
+      <p>3 pages</p>
       <p><strong>$400</strong></p>
     </div>
     <div class="package">
       <h3>Business Site</h3>
-      <p>5 Pages + Google Business Setup</p>
+      <p>5 pages + Google Business Setup</p>
       <p><strong>$600</strong></p>
     </div>
     <div class="package">
       <h3>Maintenance</h3>
-      <p>Monthly Updates</p>
+      <p>Monthly updates</p>
       <p><strong>$50/mo</strong></p>
     </div>
   </div>
@@ -90,29 +80,53 @@
 <section id="portfolio">
   <h2>Portfolio Samples</h2>
   <div class="portfolio">
-
-    <!-- Barber Demo -->
     <div class="project">
-      <a href="https://websitedylan.github.io/barber-demo" target="_blank">
-        <img src="images/stay-sharp-demo.png" alt="Stay Sharp Barbershop">
+      <a href="barber-demo/index.html" target="_blank">
+        <img src="images/stay-sharp-demo.png" alt="Stay Sharp Demo">
       </a>
       <h3>Stay Sharp Barbershop</h3>
     </div>
-
-    <!-- Add more client demos below -->
-    <!-- Example: Paisano's, Sober Living, etc -->
-
   </div>
 </section>
 
 <section id="contact">
-  <h2>Contact</h2>
-  <p>Email: dylabytes@gmail.com</p>
+  <h2>Contact Me</h2>
+  <form action="https://formspree.io/f/xanjeldj" method="POST">
+    <label for="first-name">First Name</label>
+    <input type="text" id="first-name" name="first-name" required />
+
+    <label for="last-name">Last Name</label>
+    <input type="text" id="last-name" name="last-name" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<section id="subscribe">
+  <h2>Join My Email List</h2>
+  <p>Be the first to hear about new drops, projects, and exclusive content.</p>
+  <form>
+    <label for="subscribe-name">Name</label>
+    <input type="text" id="subscribe-name" name="subscribe-name" required />
+
+    <label for="subscribe-email">Email</label>
+    <input type="email" id="subscribe-email" name="subscribe-email" required />
+
+    <button type="submit">Subscribe</button>
+  </form>
 </section>
 
 <footer>
   &copy; 2025 DylaBytes. All rights reserved.
 </footer>
+
+<a class="sticky-contact" href="#contact">Work With Me</a>
 
 </body>
 </html>
