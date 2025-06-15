@@ -2,117 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DylaBytes - Small Business Website Design</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
-
   <style>
-    html { scroll-behavior: smooth; }
-    body { margin: 0; font-family: Arial, sans-serif; background: #fffaf5; color: #000; }
-    header { background: #fff; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); }
-    .logo img { height: 60px; width: auto; }
-    .site-title { font-size: 2rem; font-weight: bold; color: #000; }
-    nav a { margin-left: 10px; padding: 8px 16px; text-decoration: none; color: purple; font-weight: bold; background-color: #f5dfff; border-radius: 20px; }
-    section { padding: 40px 20px; max-width: 900px; margin: auto; }
-    h2 { text-align: center; }
-    .service-card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); margin-bottom: 20px; }
-    .pricing { display: flex; justify-content: center; flex-wrap: wrap; }
-    .package { border: 1px solid #ddd; padding: 20px; margin: 10px; flex: 1; max-width: 250px; text-align: center; }
-    form label { display: block; margin-bottom: 5px; font-weight: bold; }
-    form input, form textarea { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px; }
-    form button { background-color: #ff7a00; color: white; padding: 14px 24px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; display: block; margin: 0 auto; }
-    .btn { background-color: #ff7a00; color: white; padding: 14px 24px; border: none; border-radius: 4px; font-weight: bold; margin-top: 20px; text-decoration: none; }
-    .social-icons { text-align: center; margin-top: 40px; }
-    .social-icons a { margin: 0 15px; font-size: 32px; color: black; text-decoration: none; }
+    body { font-family: Arial, sans-serif; margin: 0; background: #fff8f4; color: #333; }
+    header { background: #121212; color: white; padding: 20px; text-align: center; }
+    nav { background: #f5dfff; padding: 15px; text-align: center; }
+    nav a { margin: 10px 15px; text-decoration: none; color: #333; font-weight: bold; padding: 10px 20px; background: #f3e2ff; border-radius: 25px; }
+    .hero { padding: 60px 20px; text-align: center; background: #fff0e6; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    .hero p { font-size: 1.2rem; margin-bottom: 20px; }
+    .cta-btn { background: #ff7a00; color: white; padding: 15px 30px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; text-decoration: none; }
+    section { padding: 40px 20px; max-width: 1000px; margin: auto; background: white; margin-bottom: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    h2 { text-align: center; margin-bottom: 30px; }
+    .pricing { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .package { border: 1px solid #ddd; padding: 20px; flex: 1 1 250px; text-align: center; border-radius: 10px; background: #fafafa; }
+    .portfolio { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+    .project { text-align: center; width: 300px; }
+    .project img { width: 100%; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.1); }
+    footer { text-align: center; padding: 20px; font-size: 0.9em; color: #777; }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      nav { flex-direction: column; }
+      nav a { margin: 10px 0; }
+      .pricing, .portfolio { flex-direction: column; align-items: center; }
+    }
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="logo"><img src="android-chrome-192x192.png" alt="Dylabytes logo" /></div>
-    <div class="site-title">DylaBytes</div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <section id="home">
-    <h1>Professional Websites for Small Businesses</h1>
-    <p>Fast, affordable website design for service businesses, entrepreneurs, and local companies.</p>
-    <a class="btn" href="#contact">Get A Free Quote</a>
-  </section>
+<header>
+  <h1>DylaBytes</h1>
+  <p>Small Business Website Design</p>
+</header>
 
-  <section id="services">
-    <h2>Services & Pricing</h2>
-    <div class="pricing">
-      <div class="package">
-        <h3>Starter Site</h3>
-        <p>3 pages</p>
-        <p><strong>$400</strong></p>
-      </div>
-      <div class="package">
-        <h3>Business Site</h3>
-        <p>5 pages + Google Business Setup</p>
-        <p><strong>$600</strong></p>
-      </div>
-      <div class="package">
-        <h3>Maintenance</h3>
-        <p>Monthly updates</p>
-        <p><strong>$50/mo</strong></p>
-      </div>
+<nav>
+  <a href="#services">Services</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+  <h1>Professional Websites for Small Businesses</h1>
+  <p>Fast, affordable website design for service businesses, entrepreneurs, and local companies.</p>
+  <a class="cta-btn" href="#contact">Get A Free Quote</a>
+</div>
+
+<section id="services">
+  <h2>Services & Pricing</h2>
+  <div class="pricing">
+    <div class="package">
+      <h3>Starter Site</h3>
+      <p>3 pages</p>
+      <p><strong>$400</strong></p>
     </div>
-  </section>
-
-  <section id="portfolio">
-    <h2>Portfolio Samples</h2>
-    <div class="service-card">
-      <h3>Local Barber Website</h3>
-      <p>Clean booking page, mobile friendly, modern design.</p>
+    <div class="package">
+      <h3>Business Site</h3>
+      <p>5 pages + Google Business Setup</p>
+      <p><strong>$600</strong></p>
     </div>
-    <div class="service-card">
-      <h3>Sober Living Home</h3>
-      <p>Simple homepage with contact form and Google Map integration.</p>
+    <div class="package">
+      <h3>Maintenance</h3>
+      <p>Monthly updates</p>
+      <p><strong>$50/mo</strong></p>
     </div>
-    <div class="service-card">
-      <h3>Mobile Mechanic Site</h3>
-      <p>Service list, quote form, and SEO setup.</p>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Let’s Build Your Website</h2>
-    <form action="https://formspree.io/f/xanjeldj" method="POST">
-      <label for="first-name">First Name</label>
-      <input type="text" id="first-name" name="first-name" required />
-
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="message">Your Project</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
-
-      <button type="submit">Send Inquiry</button>
-    </form>
-  </section>
-
-  <div class="social-icons">
-    <a href="mailto:info@dylabytes.com"><i class="fas fa-envelope"></i></a>
-    <a href="https://github.com/websitedylan" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/dylan-land-2a51a62b1" target="_blank"><i class="fab fa-linkedin"></i></a>
   </div>
+</section>
 
-  <footer style="text-align:center; margin:40px 0; font-size: 0.9em; color: #777;">
-    &copy; 2025 DylaBytes. All rights reserved.
-  </footer>
+<section id="portfolio">
+  <h2>Portfolio Samples</h2>
+  <div class="portfolio">
+
+    <div class="project">
+      <a href="barber-demo/index.html" target="_blank">
+        <img src="screenshots/staysharplogo.png" alt="Stay Sharp Demo">
+      </a>
+      <h3>Stay Sharp Barbershop</h3>
+    </div>
+
+    <!-- You can keep adding more demos below as you build them -->
+    <!-- Example placeholder: -->
+    <!-- 
+    <div class="project">
+      <a href="soberliving-demo/index.html" target="_blank">
+        <img src="screenshots/soberlivinglogo.png" alt="Sober Living Demo">
+      </a>
+      <h3>Sober Living Home</h3>
+    </div>
+    -->
+
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: dylabytes@gmail.com</p>
+</section>
+
+<footer>
+  &copy; 2025 DylaBytes. All rights reserved.
+</footer>
 
 </body>
 </html>
