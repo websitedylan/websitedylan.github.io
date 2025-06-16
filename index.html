@@ -7,7 +7,7 @@
   <style>
     html { 
       scroll-behavior: smooth; 
-      scroll-padding-top: 150px;
+      scroll-padding-top: 150px; /* This is the key fix */
     }
     body { font-family: Arial, sans-serif; margin: 0; background: #fff8f4; color: #333; }
     header { background: #121212; color: white; padding: 20px; text-align: center; position: sticky; top: 0; z-index: 1000; }
@@ -29,8 +29,6 @@
     form input, form textarea { width: 100%; padding: 12px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px; }
     form button { background-color: #ff7a00; color: white; padding: 14px 24px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; display: block; margin: 0 auto; }
     .sticky-contact { position: fixed; bottom: 20px; right: 20px; background: #ff7a00; padding: 15px 25px; border-radius: 30px; color: white; font-weight: bold; text-decoration: none; box-shadow: 0 0 10px rgba(0,0,0,0.3); }
-    .social-icons { position: absolute; top: 20px; right: 20px; }
-    .social-icons img { width: 30px; margin-left: 10px; vertical-align: middle; }
     @media (max-width: 600px) {
       .hero h1 { font-size: 2rem; }
       nav { flex-direction: column; }
@@ -46,15 +44,6 @@
 <header>
   <h1>DylaBytes</h1>
   <p>Small Business Website Design</p>
-
-  <div class="social-icons">
-    <a href="https://www.instagram.com/" target="_blank">
-      <img src="images/instagram.png" alt="Instagram">
-    </a>
-    <a href="https://www.facebook.com/" target="_blank">
-      <img src="images/facebook.png" alt="Facebook">
-    </a>
-  </div>
 </header>
 
 <nav>
